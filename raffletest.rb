@@ -8,9 +8,10 @@ class Test_Raffles < Minitest::Test
 		assert_equal(["5432"], raffle_tickets(my_number, winning_num))
 	end
 	def one_number_off
+	puts winning
 		my_number = "5432"
-		winning_num = "1432"
+		winning_num = "0000"
 		assert_equal(true, almostwin(my_number, winning_num))
 	end
-	
 end
+
