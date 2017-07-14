@@ -7,7 +7,7 @@ def raffle_tickets(my_number, winning_num)
 	end
 	matches
 end
-
+=begin
 def almostwin(my_number, winning_num)
 	correct_numbers = 0
 	if my_number[0] == winning_num[0]
@@ -28,8 +28,43 @@ def almostwin(my_number, winning_num)
 	if correct_numbers == 3
 	true
 	end
-	p almostwin
+end
+=end
+def almostwin(my_number, winning_num)
+
+  correct_numbers = 0
+
+  z = 0
+
+  winning_num.length.times do
+
+    i = 0
+
+  winning_num.length.times do
+
+  if my_number[z] == winning_num[i]
+
+   correct_numbers += 1
+
+  end
+
+  i += 1
+
 end
 
+z += 1
 
+end 
+
+  correct_numbers == winning_num.length - 1
+
+  end
 	
+def justabout(my_number, winning_num)
+	winner = []
+	winning_num.each do |y|
+		if almostwin(my_number, y) == true
+		winner << y
+		end
+	end
+end
