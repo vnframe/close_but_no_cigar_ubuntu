@@ -36,25 +36,25 @@ def almostwin(my_number, winning_num)
 
   z = 0
 
-  winning_num.length.times do
+ 	 winning_num.length.times do
 
     i = 0
 
-  winning_num.length.times do
+  		winning_num.length.times do
 
-  if my_number[z] == winning_num[i]
+  			if my_number[z] == winning_num[i]
 
-   correct_numbers += 1
+   				correct_numbers += 1
 
-  end
+ 		 	end
 
-  i += 1
+ 			 i += 1
 
-end
+		end
 
-z += 1
+		z += 1
 
-end 
+	end 
 
   correct_numbers == winning_num.length - 1
 
@@ -67,4 +67,45 @@ def justabout(my_number, winning_num)
 		winner << y
 		end
 	end
+	winner
+end
+
+def almostwin_any(my_number, winning_num)
+
+  correct_numbers = 0
+
+  z = 0
+
+ 	 winning_num.length.times do
+
+    i = 0
+
+  		winning_num.length.times do
+
+  			if my_number[z] == winning_num[i]
+
+   				correct_numbers += 1
+
+ 		 	end
+
+ 			 i += 1
+
+		end
+
+		z += 1
+
+	end 
+
+  correct_numbers == winning_num.cycle - 1
+
+  end
+
+def any_two(my_number, winning_num)
+	winner = []
+	winning_num.each do
+		if almostwin(my_number, winning_num) == true
+		winner << y
+		end
+	end
+	winner
 end

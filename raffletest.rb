@@ -30,7 +30,12 @@ puts "I'm here"
 		winning_num = ["5432", "6743", "7219", "1432"]
 		assert_equal(["1432"], justabout(my_number, winning_num))
 	end
+	def test_any_two 
+		my_number = "5432"
+		winning_num = ["5432", "54321", "7219", "1432"].cycle
+		assert_equal(["54321"], any_two(my_number, winning_num))
 
+	end
 end
 
 
