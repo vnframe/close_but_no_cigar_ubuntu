@@ -59,7 +59,7 @@ def almostwin(my_number, winning_num)
   correct_numbers == winning_num.length - 1
 
   end
-	
+
 def justabout(my_number, winning_num)
 	winner = []
 	winning_num.each do |y|
@@ -69,6 +69,7 @@ def justabout(my_number, winning_num)
 	end
 	winner
 end
+
 
 def any_two(my_number, winning_num)
 	winner = []
